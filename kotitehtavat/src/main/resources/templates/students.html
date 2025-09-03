@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Week 2, exe 2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+    <h1>Opiskelijat ovat</h1>
+
+    <ul>
+        <li th:each="opiskelija : ${students}">
+            <span th:text="${opiskelija.firstName}">First name</span>
+            <span th:text="${opiskelija.lastName}">Last name</span>
+        </li>
+    </ul>
+
+    <p><a th:href=*"@{/add}"*>Add friend</a></p>
+
+</body>
+
+</html>

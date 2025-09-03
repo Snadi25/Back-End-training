@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Week 2, exe 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div th:text="'Heippa ' + ${nimi} + ', ' + ${ika} + ' vuotta'"></div>
+    <div th:if="${ika} &gt; 17">
+        <p th:text="'Hellurei ' + ${nimi} + ', ' + ${ika} + ' vuotta'"></p>
+    </div>
+    <div th:if="${ika} &lt; 18">
+        <p th:text="'Olet alle 18 vuotta, ikäsi on '+ ${ika} "></p>
+    </div>
+</body>
+
+</html>
